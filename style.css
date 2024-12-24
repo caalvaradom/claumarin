@@ -1,0 +1,110 @@
+/* 
+  Paleta de colores:
+  --color-principal: #284676;      (Azul profundo)
+  --color-secundario: #C3922E;    (Dorado/Mostaza)
+  --color-apoyo: #FFFFFF;         (Blanco)
+  --color-complementario: #5D5E61;
+  --color-neutral: #ECECEC;       (Gris claro)
+*/
+
+:root {
+  --color-principal: #284676; 
+  --color-secundario: #C3922E; 
+  --color-apoyo: #FFFFFF; 
+  --color-complementario: #5D5E61; 
+  --color-neutral: #ECECEC;
+
+  /* Fuente principal (puedes cambiarla a tu gusto, ej. Google Fonts) */
+  --fuente-principal: "Arial", sans-serif;
+}
+
+/* RESETEAR MÁRGENES Y PADDING BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-neutral); /* Gris claro de fondo */
+  color: var(--color-complementario);     /* Texto en gris oscuro complementario */
+}
+
+/* ENCABEZADO */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  background-color: var(--color-apoyo); /* Blanco para resaltar el logo */
+  border-bottom: 3px solid var(--color-principal);
+}
+
+.logo-container img {
+  max-width: 150px;
+  margin-bottom: 1em;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--color-principal);
+  margin-bottom: 0.3em;
+}
+
+.slogan {
+  font-size: 1rem;
+  color: var(--color-complementario);
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-principal);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: var(--color-apoyo); /* Blanco */
+  text-decoration: none;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-complementario); /* Gris oscuro */
+  color: var(--color-apoyo); /* Texto en blanco */
+}
+
+nav a.active {
+  background-color: var(--color-secundario); /* Dorado/Mostaza */
+  color: var(--color-apoyo); /* Blanco */
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+  margin: 2em auto;
+  max-width: 960px;
+  padding: 0 1em;
+}
+
+main h2 {
+  color: var(--color-principal);
+  margin-bottom: 0.5em;
+}
+
+main p {
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--color-principal);
+  color: var(--color-apoyo); /* Blanco */
+  margin-top: 2em;
+}
